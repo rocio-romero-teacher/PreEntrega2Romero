@@ -17,7 +17,6 @@
     main {
         grid-area: main;
         background-color: lightgray;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
         display: flex;
         flex-wrap: wrap;
     }  
@@ -33,16 +32,22 @@
         color: black;
         font-size: 15px;
     }
-
+    main h5 {
+        color: black;
+        font-size: 15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 header {
     position: sticky;
     top: 0;
-    background-color: #2A9D8F;
+    background-color: #2a9d8f;
     grid-area: header;
 }
 nav, ul, li, a {
     list-style-type: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
@@ -70,6 +75,7 @@ main img {
 h1 {
     font-size: 22px;
     color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 h2, h3, h4 {
     font-size: 20px;
@@ -102,26 +108,39 @@ b {
     /*_____termina html index_____*/
 
     /*_____empieza html novedades_____*/
+#cont1 {    
+    background-color: #264653;
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.7fr;
+    grid-template-rows: -0.4fr 2fr 0.7fr;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "pie pie pie"
+}
 .tblstyle {
     table-layout: fixed;
+    background-color: antiquewhite;
 }
 
 h5 {
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    color: midnightblue; 
+    color: lavenderblush; 
 }
 
 #news {
     display: grid;
     grid-template-columns: 3fr;
-
 }
-
 #clr {
-    color: black;
+    color: lavenderblush;
 }
+#align {
+    text-align: center;
+}
+
     /*_____termina html novedades_____*/
 
 
