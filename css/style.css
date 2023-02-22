@@ -1,4 +1,9 @@
  
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
  /*_____empieza html index_____*/
 #container {
     background-color: #264653;
@@ -6,9 +11,9 @@
     grid-template-columns: 2fr 2fr 0.7fr;
     grid-template-rows: -0.5fr 2fr 0.7fr;
     grid-template-areas:
-    "header header ads"
+    "header header header"
     "main main ads"
-    "pie pie ads"
+    "pie pie pie"
 }
 @media screen and (max-width: 480px) {
     header h1 {
@@ -17,7 +22,7 @@
     main {
         grid-area: main;
         background-color: lightgray;
-        display: flex;
+        display: block;
         flex-wrap: wrap;
     }  
     main h2 {
@@ -40,10 +45,11 @@
     }
 }
 header {
+    grid-area: header;
     position: sticky;
     top: 0;
     background-color: #2a9d8f;
-    grid-area: header;
+    margin-bottom: 10px;
 }
 nav, ul, li, a {
     list-style-type: none;
@@ -53,7 +59,7 @@ nav, ul, li, a {
     font-weight: bold;
     color: lavender;
     display: inline-block;
-    padding: 5px;
+    padding: 8px;
   }
 nav ul li a:hover {
     background-color: #264653;
@@ -63,6 +69,10 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    padding-bottom: 8px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    color: lavenderblush;
 }
 main img {
     width: 20%;
@@ -70,31 +80,52 @@ main img {
     float: left;
     border-radius: 10px;
     align-items: baseline;
+    line-height: 2;
 }
-
-h1 {
-    font-size: 22px;
+.anmt { 
+    animation: animate 2s linear;
+}
+@keyframes animate {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(40px);
+    }
+}
+h1, h2, h3, h4 {
+    font-size: 20px;
     color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-h2, h3, h4 {
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: antiquewhite;
-    padding-top: 5px;
-    padding-bottom: 3px;
+    padding: 8px;
+    line-height: 3;
 }
 aside {
-    background-color: #FFC857;
     grid-area: ads;
+    background-color: #FFC857;
 }
 footer {
+    grid-area: pie;
     font-size: 20px;
     font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: lavender;
     background-color:#2A9D8F;
-    grid-area: pie;
-    padding-top: 2px;
+    padding: 10px;
+    line-height: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.border {
+    border-style: solid;
+    border-color: #264653;
+    border-radius: 5px;
+    padding: 10px;
+}
+#piealign {
+    display: flex;
+    flex-direction: column;
 }
 .font-color {
     color: black;
@@ -103,43 +134,67 @@ footer {
 b {
     text-decoration: underline;
 }
-
-
     /*_____termina html index_____*/
 
     /*_____empieza html novedades_____*/
-body {
+    body {
     background-color: #264653;
 }
-h1 {  
-font-size: 22px;
-color: black;
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-weight: bolder;
+.table-confg {
+    background-color: whitesmoke;   
 }
-h5, h6 {
+h1 {  
+    font-size: 22px;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+#h-2 {
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     color: lavenderblush; 
-}
-#align {
     text-align: center;
 }
-
-.nav-tuneo {
-    color: lavenderblush;
+h3, h4, h5, h6 {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+}
+.padconf {
+    padding-bottom: 20px;
+}
+.eff1:hover {
+    transition: all .8s ease-out;
+    transform: scale(1.1);
+}
+#img-conf { 
+    height: 430px;
+}
+#img-conf2 { 
+    height: 420px;
+}
+#buttonconf {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: lightskyblue;
+    border: solid 2px lightskyblue;
 }
 
     /*_____termina html novedades_____*/
 
 
  /*____empieza html - quiénes somos____*/
- 
- #clr1 {
+ #hh-3 {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: black;
- }
- 
+    padding: 25px;
+    padding-bottom: 10px;
+}
  #clr2 {
     color: black;
  }
